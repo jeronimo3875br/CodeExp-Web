@@ -1,0 +1,75 @@
+<template>
+  <div class="container">
+    <div class="card">
+      <h1 class="card-title">About us</h1>
+      <p class="card-description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+      <button class="card-contact-button">Contact Us</button>
+    </div>
+  </div>
+</template>
+
+<script  lang="ts">
+  import { Vue, Component } from "nuxt-property-decorator";
+
+  @Component
+  export default class AboutUsCardComponent extends Vue {
+  }
+</script>
+
+<style scoped>
+.card {
+  position: relative;
+  left: 15%;
+  width: 40%;
+  height: 50%;
+  padding: 10px;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7% auto 20%;
+  gap: 20px;
+}
+
+.card-title {
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+
+.card-description {
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.card-contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: #212121;
+  padding: 15px 10px;
+  width: 40%;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.card-contact-button:hover {
+  color: #212121;
+}
+
+@media screen and (max-width: 750px){
+  .container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    left: 0;
+    width: 60%;
+  }
+}
+</style>
