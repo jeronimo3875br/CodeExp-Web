@@ -1,4 +1,11 @@
 export default {
+
+  generate: {
+    routes: [
+      "/home"
+    ]
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'CodeExp',
