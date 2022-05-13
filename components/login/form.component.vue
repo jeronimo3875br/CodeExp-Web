@@ -17,7 +17,7 @@
     ></textarea>
     <input type="submit" />
     <p>
-      Ao enviar, seus dados serão transferidos a uma área de atendimento e você recebera um email com a resposta da sua solicitação de contato, em até 24 horas.
+      Upon submission, your data will be transferred to a service area and you will receive an email with a response to your contact request, within 24 hours.
     </p>
   </form>
 </template>
