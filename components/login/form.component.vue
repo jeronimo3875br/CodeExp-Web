@@ -53,7 +53,7 @@
 }
 
 .login-form input, textarea {
-  width: 80%;
+  width: 70%;
   padding: 20px;
   background: transparent;
   backdrop-filter: blur(10px);
@@ -78,5 +78,11 @@
 .login-form h1 {
   color: #808080;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 750px){
+  .login-form input, textarea {
+    width: 80%;
+  }
 }
 </style>
