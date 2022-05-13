@@ -82,7 +82,11 @@
 
 @media screen and (max-width: 750px){
   .login-form input, textarea {
-    width: 80%;
+    width: 90%;
+  }
+
+  .login-form input:focus > .login-form {
+    background: red;
   }
 }
 </style>

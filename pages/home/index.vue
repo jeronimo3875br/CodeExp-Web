@@ -32,6 +32,7 @@
 @media screen and (max-width: 750px){
   .context {
     grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100vh, auto);
   }
 }
 </style>

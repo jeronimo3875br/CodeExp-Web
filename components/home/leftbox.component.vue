@@ -49,7 +49,9 @@
 
 @media screen and (max-width: 750px){
   .container {
+    position: relative;
     grid-row-start: 2;
+    height: auto;
   }
 }
 </style>
