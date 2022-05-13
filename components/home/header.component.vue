@@ -1,18 +1,18 @@
 <template>
   <header class="menu">
     <ul class="menu-items">
-      <li class="menu-item">
+      <nuxt-link class="menu-item" to="/home" tag="li">
         <a href="#">Home</a>
-      </li>
-      <li class="menu-item">
-        <a href="#">About us</a>
-      </li>
-      <li class="menu-item">
+      </nuxt-link>
+      <nuxt-link class="menu-item" to="/home" tag="li">
+        <a href="#">About Us</a>
+      </nuxt-link>
+      <nuxt-link class="menu-item" to="/home" tag="li">
         <a href="#">Services</a>
-      </li>
-      <li class="menu-item">
-        <a href="#">Contact</a>
-      </li>
+      </nuxt-link>
+      <nuxt-link class="menu-item" to="/home" tag="li">
+        <a id="menu-item-login" href="#">Login</a>
+      </nuxt-link>
     </ul>
   </header>
 </template>
@@ -21,9 +21,7 @@
   import { Vue, Component } from "nuxt-property-decorator";
 
   @Component
-  export default class HeaderComponent extends Vue {
-
-  }
+  export default class HeaderComponent extends Vue {}
 </script>
 
 <style scoped>
@@ -41,6 +39,8 @@
 
 .menu-item {
   list-style: none;
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .menu-item a {
@@ -50,7 +50,36 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu-item a:hover {
-  text-decoration: underline;
+.menu-item a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  margin-top: 5px;
+  background-color: #ffffff;
+}
+
+.menu-item a:hover::after {
+  transition: .2s;
+  width: 100%;
+}
+
+#menu-item-login {
+  color: #212121;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+#menu-item-login::after {
+  display: none;
+}
+
+
+@media screen and (max-width: 750px){
+  .menu-item {
+    font-size: 15px;
+  }
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="card">
       <h1 class="card-title">About us</h1>
       <p class="card-description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-      <button class="card-contact-button">Contact Us</button>
+      <a href="#contact" class="card-contact-button">Contact Us</a>
     </div>
   </div>
 </template>
@@ -53,6 +53,8 @@
   font-weight: bold;
   cursor: pointer;
   background-color: #ffffff;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 .card-contact-button:hover {
@@ -70,6 +72,10 @@
   .card {
     left: 0;
     width: 60%;
+  }
+
+  .card-contact-button {
+    width: 50%;
   }
 }
 </style>
