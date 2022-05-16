@@ -66,4 +66,10 @@
 .experience-word {
   color: #f68c1f;
 }
+
+@media screen and (max-width: 750px){
+  .dashboard-header {
+    padding: 10px;
+  }
+}
 </style>
