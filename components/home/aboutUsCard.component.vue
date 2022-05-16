@@ -1,19 +1,32 @@
 <template>
   <div class="container">
     <div class="card">
-      <h1 class="card-title">About us</h1>
+      <h1 class="card-title">About Us</h1>
       <p class="card-description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-      <a href="#contact" class="card-contact-button">Contact Us</a>
+      <a href="#contact" class="card-contact-button" @click="changeLoginStatus">Contact Us</a>
     </div>
   </div>
 </template>
 
-<script  lang="ts">
-  import { Vue, Component } from "nuxt-property-decorator";
+<script lang="ts">
 
-  @Component
-  export default class AboutUsCardComponent extends Vue {
-  }
+    import { Vue, Component, namespace } from 'nuxt-property-decorator';
+    import LoginForm from "@/components/login/form.component.vue";
+
+    const user = namespace('contact');
+
+    @Component({
+        components: {
+          LoginForm
+        }
+    })
+    export default class AboutUsCardComponent extends Vue {
+      @user.Getter
+      public hasLoginStatus!: string
+
+      @user.Mutation
+      public changeLoginStatus!: () => void;
+    }
 </script>
 
 <style scoped>

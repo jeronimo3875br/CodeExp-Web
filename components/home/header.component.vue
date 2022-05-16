@@ -10,7 +10,7 @@
       <nuxt-link class="menu-item" to="/home" tag="li">
         <a href="#">Services</a>
       </nuxt-link>
-      <nuxt-link class="menu-item" to="/home" tag="li">
+      <nuxt-link class="menu-item" to="/dashboard" tag="li">
         <a id="menu-item-login" href="#">Login</a>
       </nuxt-link>
     </ul>

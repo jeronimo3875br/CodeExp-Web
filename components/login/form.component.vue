@@ -1,5 +1,5 @@
 <template>
-  <form class="login-form" @submit.prevent.stop="">
+  <form class="login-form" @submit.prevent.stop="sendContactMessage">
     <h1>Contact</h1>
     <input
       v-model="userLogin.name"
@@ -34,9 +34,13 @@
   @Component
   export default class LoginComponent extends Vue {
     private userLogin: IUserLogin = {
+      name: "",
       email: "",
-      message: "",
-      name: ""
+      message: ""
+    }
+
+    private sendContactMessage(): void {
+      console.log(this.userLogin);
     }
   }
 </script>

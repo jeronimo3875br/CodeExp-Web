@@ -1,29 +1,27 @@
 <template>
   <section id="contact" class="container">
-    <h1 v-if="login == false" class="title">{{ title }}</h1>
+    <h1 v-if="hasLoginStatus == false" class="title">codeexp</h1>
     <div v-else class="login-container">
       <LoginForm />
     </div>
   </section>
 </template>
 
-<script  lang="ts">
-  import { Vue, Component, Prop } from "nuxt-property-decorator";
-  import LoginForm from "@/components/login/form.component.vue";
+<script lang="ts">
+    import { Vue, Component, namespace } from 'nuxt-property-decorator';
+    import LoginForm from "@/components/login/form.component.vue";
 
-  @Component({
-    components: {
-      LoginForm
-    }
-  })
-  export default class LeftBoxComponent extends Vue {
-    private title = "<codeexp/>";
+    const user = namespace('contact');
 
-    @Prop({
-      default: false
+    @Component({
+        components: {
+          LoginForm
+        }
     })
-    private login: boolean = true;
-  }
+    export default class LeftBoxComponent extends Vue {
+      @user.Getter
+      public hasLoginStatus!: string
+    }
 </script>
 
 <style scoped>
